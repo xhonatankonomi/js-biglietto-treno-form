@@ -5,7 +5,7 @@
 const prezzoKm = 0.21;
 const scontoMinorenni = 0.2;
 const sconto65 = 0.4;
-const bottone = document.getElementById('calcoloBtn');
+const bottone = document.getElementById('calcolaBtn');
 
 
 bottone.addEventListener('click', function () {
@@ -32,11 +32,11 @@ bottone.addEventListener('click', function () {
     }
 
     let prezzoFinale = prezzoBase - scontoApplicato;
-    
+
     console.log("Km da percorrere:", kmTotali);
     console.log("Età del passeggero:", etaPasseggero);
     console.log("Prezzo base (senza sconti):", prezzoBase.toFixed(2), "€");
-    console.log("Sconto applicato:", nomeSconto);
+    console.log("Sconto applicato:", tipoSconto);
     console.log("Importo dello sconto:", scontoApplicato.toFixed(2), "€");
     console.log("PREZZO FINALE:", prezzoFinale.toFixed(2), "€");
 })

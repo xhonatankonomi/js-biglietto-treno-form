@@ -13,4 +13,9 @@ bottone.addEventListener('click', function () {
     let etaInput = document.getElementById('etaInput').value;
     let kmTotali = Number(kmInput);
     let etaPasseggero = Number(etaInput);
+
+    if (kmTotali <=0 || etaPasseggero <= 0) {
+        console.log("Inserisci un valore valido");
+        return;
+    }
 })

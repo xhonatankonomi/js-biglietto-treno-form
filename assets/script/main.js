@@ -3,8 +3,8 @@
  Definisce il costo al chilometro, gli sconti applicabili e aggiunge un listener al bottone di calcolo.
 */
 const prezzoKm = 0.21;
-const scontoMinorenni = prezzoKm - (prezzoKm * 0.2);
-const sconto65 = prezzoKm - (prezzoKm * 0.4);
+const scontoMinorenni = 0.2;
+const sconto65 = 0.4;
 const bottone = document.getElementById('calcoloBtn');
 
 
@@ -18,4 +18,18 @@ bottone.addEventListener('click', function () {
         console.log("Inserisci un valore valido");
         return;
     }
+
+    let prezzoBase = kmTotali * prezzoKm;
+    let scontoApplicato = 0;
+    let tipoSconto = "Nessuno sconto";
+
+    if (etaPasseggero < 18) {
+        scontoApplicato = prezzoBase * scontoMinorenni;
+        tipoSconto = "Sconto minorenni (20%)"
+    } else if (etaPasseggero >= 65) {
+        scontoApplicato = prezzoBase * sconto65;
+        tipoSconto = "Sconto over 65 (40%)"
+    }
+
+    let prezzoFinale = prezzoBase - scontoApplicato;
 })

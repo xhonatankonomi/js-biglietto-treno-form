@@ -36,7 +36,12 @@ bottone.addEventListener('click', function () {
     const prezzoFormattato  = prezzoFinale.toFixed(2);
     const importoFormattato = scontoApplicato.toFixed(2);
 
-    let outputHtml = ''
+    let outputHtml = `
+    <h2>Riepilogo Biglietto</h2> 
+    <p><strong>Distnza da percorrere:</strong> ${kmTotali}</p>
+    <p><strong>Età del passeggero:</strong> ${etaPasseggero}</p>
+    
+    `
 
     /* console.log("Km da percorrere:", kmTotali);
     console.log("Età del passeggero:", etaPasseggero);

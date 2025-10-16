@@ -9,5 +9,8 @@ const bottone = document.getElementById('calcoloBtn');
 
 
 bottone.addEventListener('click', function () {
-
+    let kmInput = document.getElementById('kmInput').value;
+    let etaInput = document.getElementById('etaInput').value;
+    let kmTotali = Number(kmInput);
+    let etaPasseggero = Number(etaInput);
 })

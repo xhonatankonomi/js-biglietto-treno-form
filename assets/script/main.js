@@ -33,10 +33,15 @@ bottone.addEventListener('click', function () {
 
     let prezzoFinale = prezzoBase - scontoApplicato;
 
-    console.log("Km da percorrere:", kmTotali);
+    const prezzoFormattato  = prezzoFinale.toFixed(2);
+    const importoFormattato = scontoApplicato.toFixed(2);
+
+    let outputHtml = ''
+
+    /* console.log("Km da percorrere:", kmTotali);
     console.log("Età del passeggero:", etaPasseggero);
     console.log("Prezzo base (senza sconti):", prezzoBase.toFixed(2), "€");
     console.log("Sconto applicato:", tipoSconto);
     console.log("Importo dello sconto:", scontoApplicato.toFixed(2), "€");
-    console.log("PREZZO FINALE:", prezzoFinale.toFixed(2), "€");
+    console.log("PREZZO FINALE:", prezzoFinale.toFixed(2), "€"); */
 })

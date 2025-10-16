@@ -6,7 +6,7 @@ const prezzoKm = 0.21;
 const scontoMinorenni = 0.2;
 const sconto65 = 0.4;
 const bottone = document.getElementById('calcolaBtn');
-
+const outputPage = document.getElementById('risultati-biglietto')
 
 bottone.addEventListener('click', function () {
     let kmInput = document.getElementById('kmInput').value;
@@ -40,8 +40,13 @@ bottone.addEventListener('click', function () {
     <h2>Riepilogo Biglietto</h2> 
     <p><strong>Distnza da percorrere:</strong> ${kmTotali}</p>
     <p><strong>Età del passeggero:</strong> ${etaPasseggero}</p>
-    
+    <p><strong>Tipo di offerta:</strong> ${tipoSconto}</p>
+    <p><strong>Sconto applicato:</strong> ${importoFormattato}</p>
+    <h3>Prezzo finale</h3>
+    <p>**${prezzoFormattato}**</p>   
     `
+
+    outputPage.innerHTML = outputHtml;
 
     /* console.log("Km da percorrere:", kmTotali);
     console.log("Età del passeggero:", etaPasseggero);
